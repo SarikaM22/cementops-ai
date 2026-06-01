@@ -26,7 +26,7 @@ class SensorSimulator:
 
         if key in self.dropout_counters and self.dropout_counters[key] > 0:
             self.dropout_counters[key] -= 1
-            value = self.last_values.get(key, 0)
+            value = self.last_values.get(key, value)
             is_anomaly = True
             anomaly_type = "dropout"
 
@@ -37,18 +37,18 @@ class SensorSimulator:
             is_anomaly = True
             anomaly_type = "drift"
 
-        elif random.random() < 0.03:
+        elif random.random() < 0.02:
             anomaly_choice = random.choice(["spike", "drift", "dropout"])
             if anomaly_choice == "spike":
                 value += random.choice([-1, 1]) * std * random.uniform(3, 5)
                 is_anomaly = True
                 anomaly_type = "spike"
             elif anomaly_choice == "drift":
-                self.drift_counters[key] = random.randint(20, 40)
+                self.drift_counters[key] = random.randint(3, 6)
                 is_anomaly = True
                 anomaly_type = "drift"
             elif anomaly_choice == "dropout":
-                self.dropout_counters[key] = random.randint(5, 10)
+                self.dropout_counters[key] = random.randint(2, 4)
                 is_anomaly = True
                 anomaly_type = "dropout"
 

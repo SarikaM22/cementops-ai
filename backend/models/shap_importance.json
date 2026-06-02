@@ -1,0 +1,12 @@
+{
+  "kiln_temp_lag1": 18.523534774780273,
+  "kiln_temperature": 10.71335506439209,
+  "kiln_temperature_mean20": 6.047937870025635,
+  "kiln_rpm_mean20": 3.964399576187134,
+  "kiln_feed_rate_std20": 3.0261433124542236,
+  "mill_vibration_mean20": 2.399531841278076,
+  "cooler_exit_temp_std20": 1.961846113204956,
+  "hour": 1.9409064054489136,
+  "mill_vibration_std20": 1.4639074802398682,
+  "kiln_rpm_std20": 1.376529335975647
+}

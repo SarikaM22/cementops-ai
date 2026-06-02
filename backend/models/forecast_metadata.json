@@ -1,0 +1,9 @@
+{
+  "rmse": 13.09,
+  "mape": 0.741,
+  "n_features": 24,
+  "train_size": 603,
+  "test_size": 151,
+  "target": "kiln_temperature_10steps_ahead",
+  "confidence_margin": 19.635
+}

@@ -436,9 +436,16 @@ export default function App() {
                 <div style={{ fontSize: 12, color: GRAY, marginTop: 2 }}>{navDesc[page]}</div>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <div style={{ width: 8, height: 8, borderRadius: '50%', background: GREEN, boxShadow: `0 0 6px ${GREEN}` }}></div>
-              <span style={{ fontSize: 12, color: GREEN, fontWeight: 500 }}>System online</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <div style={{ width: 8, height: 8, borderRadius: '50%', background: GREEN, boxShadow: `0 0 6px ${GREEN}` }}></div>
+                <span style={{ fontSize: 12, color: GREEN, fontWeight: 500 }}>System online</span>
+              </div>
+              <button
+                onClick={() => window.open('http://localhost:8000/api/report', '_blank')}
+                style={{ background: UT_YELLOW, color: UT_DARK, border: 'none', borderRadius: 8, padding: '7px 14px', fontSize: 12, fontWeight: 700, cursor: 'pointer' }}>
+                📄 Download Shift Report
+              </button>
             </div>
           </div>
 

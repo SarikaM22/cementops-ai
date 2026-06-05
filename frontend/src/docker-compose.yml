@@ -1,4 +1,4 @@
-
+version: '3.8'
 
 services:
 
@@ -11,6 +11,7 @@ services:
       POSTGRES_PASSWORD: cementops2024
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
     healthcheck:
